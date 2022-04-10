@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>My Webpage Title</title>
+		
+		<!-- styles -->
+		
+		<style>
+			h1 { font-size:200%; text-decoration:none; font-weight: 200; }
+			h2 { font-size:150%; text-decoration:none; font-weight: 200; }
+			h3 { font-size:140%; text-decoration:none; font-weight: 200; }
+			h4 { font-size:130%; text-decoration:none; font-weight: 200; }
+			h5 { font-size:120%; text-decoration:none; font-weight: 200; }
+			h6 { font-size:110%; text-decoration:none; font-weight: 200; }
+			
+			
+			.sidebar
+			{
+				position:fixed; 
+				top:0;
+				left:0; 
+				width:25%; 
+				height:100vh; 
+				display:inline-block; 
+				padding:0; padding-left:5%;
+				overflow-x:hidden; overflow-y:auto;
+				background-color:#ddd; color:#121212;
+			}
+		</style>
+		<!-- scripts -->		
+	</head>
+		
+	<body style = "margin:0; padding:0; font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; overflow-x: hidden;">		
+		<!-- header -->			
+		<!-- header -->
+		
+		
+		<!-- 
+		
+			left: 30% -> pad:10% text:20%
+			body: 70% -> pad:5%  text:60% pad:5%
+		
+		-->
+		
+			<!-- page layout -->
+			<div style = "width:100vw; margin:0; padding:0; min-height:100vh; overflow-x: hidden;">	
+				
+				<!-- sidebar layout -->				
+				<div class = "sidebar">
+					<h1 style= "padding:0;">Docs</h1>
+					<hr>					
+					
+					<ul>												
+					<!-- <ul>
+  
+</ul> -->
+					<ul class = 'nav-bar'>
+<li><a href = '\docs\ai\'>ai</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\ai\behaviour\'>behaviour</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\ai\memory\'>memory</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\ai\navigation\'>navigation</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li><a href = '\docs\animations\'>animations</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\animations\controller\'>controller</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\animations\events\'>events</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\animations\trigger\'>trigger</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li><a href = '\docs\asset\'>asset</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\asset\authoring\'>authoring</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\asset\exporting\'>exporting</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\asset\importing\'>importing</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\asset\updating\'>updating</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\asset\versioning\'>versioning</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li><a href = '\docs\audio\'>audio</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\audio\modifier\'>modifier</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\audio\reciever\'>reciever</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\audio\source\'>source</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li><a href = '\docs\graphics\'>graphics</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
+<li><a href = '\docs\input\'>input</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
+<li><a href = '\docs\localisation\'>localisation</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
+<li><a href = '\docs\market\'>market</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\market\buying\'>buying</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\market\selling\'>selling</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li><a href = '\docs\math\'>math</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
+<li><a href = '\docs\networking\'>networking</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
+<li><a href = '\docs\physics\'>physics</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\physics\bodies\'>bodies</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\physics\colliders\'>colliders</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\physics\joints\'>joints</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\physics\scene-queries\'>scene-queries</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\physics\springs\'>springs</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li><a href = '\docs\plugins\'>plugins</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\plugins\editor\'>editor</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\plugins\engine\'>engine</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\plugins\product\'>product</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li><a href = '\docs\publishing\'>publishing</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
+<li><a href = '\docs\scripting\'>scripting</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\scripting\debugging\'>debugging</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\scripting\hooks\'>hooks</a>
+        <ul class = 'nav-bar'>
+        <li><a href = '\docs\scripting\hooks\Animate\'>Animate</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\scripting\hooks\EnterScene\'>EnterScene</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\scripting\hooks\ExitScene\'>ExitScene</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\scripting\hooks\Update\'>Update</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        </ul>
+    </li>
+    <li><a href = '\docs\scripting\keywords\'>keywords</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li><a href = '\docs\serialisation\'>serialisation</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
+<li><a href = '\docs\testing\'>testing</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
+<li><a href = '\docs\tutorials\'>tutorials</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\tutorials\firstPersonShooter\'>firstPersonShooter</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\tutorials\platformer2D\'>platformer2D</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\tutorials\platformer3D\'>platformer3D</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\tutorials\spaceInvaders\'>spaceInvaders</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\tutorials\thirdPersonShooter\'>thirdPersonShooter</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    </ul>
+</li>
+</ul>
+						
+				</div>
+				
+				<!-- header layout -->
+				<div style = "width:70%; padding:0; margin:0; margin-left:30%; display:inline-block; color:#121212; font-weight:300;">
+									
+							<h1 style = "margin-left:5vw; padding:0;"> Assets</h1>
+								
+				<hr>
+				</div>
+				
+				<div style = "width:60%; min-height:100vh; padding-left:5%;padding-right:5%;padding-top:1em; margin-left:30%; display:inline-block;">															
+					<h1 id="overview">Overview</h1>
+<p>Assets are a foundational building block of every game. 
+Assets are permanent files that are read by the engine in order to provide the gameplay experience. Some can be created procedurally or programatically, using tools that the engine provides, whilst others need to be imported from external tools (like blender or houdini).</p>
+
+<p>In order for the editor to function, additional metadata is attached to each asset when it’s imported in. This means that once an asset is imported into the engine, it can only be moved, renamed or deleted. If it’s overwritten by another file outside of the editor environment, then the engine could break.</p>
+
+<h1 id="types">Types</h1>
+<ul>
+  <li>Animations</li>
+  <li>Audio Files</li>
+  <li>Images</li>
+  <li>Materials</li>
+  <li>Meshes</li>
+  <li>Models</li>
+  <li>Particle Systems</li>
+  <li>Scenes</li>
+  <li>Scripts</li>
+  <li>Shaders</li>
+</ul>
+
+<h2 id="animations">Animations</h2>
+<p>Animations are a fundamental component of most games. The editor itself doesn’t have the ability to create animations, however they can be imported within fbx files. Once imported, an animation can only be used for the model it was imported on.</p>
+
+<p>Sometimes it can be useful for an animation to trigger a specific behaviour in the game. For example, when a roll begins, it could trigger a period of invincibility for the player. One way of doing this is to embed a ‘begin roll’ and ‘end roll’ animation event into the clip. When replaying the animation, the animator will attempt to call the function associated with each event, which would toggle the invincibility of the player.</p>
+
+<h2 id="audio-files">Audio Files</h2>
+<p>Audio files can be imported as either wav, mp3, ogg or flac files.
+The engine has a maximum limit of 8 audio files playing at once, after which files will be queued to be played when the next clip is finished. To use an audio file in script (the only way to use them), it must be loaded, read, and queued for play. If there are less than 8 audio clips playing, it will begin immediately, taking up a place in the buffer until the clip is complete.</p>
+
+<p>Optionally, an audio clip can be set to play n amount of times, or an infinite amount of times. A fade-in and fade-out mechanic is coming soon.</p>
+
+<h2 id="images">Images</h2>
+<p>Image files can be imported as either png or jpg files, and have massive versatility in an engine. They can be used to texture models, giving higher resolution graphics without resorting to increasing the vertex count. They can be used as heightmaps for terrain, or as a skybox. Images can even be used totally arbitrarily, with a specific meaning given to each channel.</p>
+
+<p>You don’t have to use all four channels in an image if you aren’t using them. During import you can select from RGBA, BGRA, RGB, RG or R.</p>
+
+<h2 id="materials">Materials</h2>
+<p>Materials can either be imported from mtl files, or created in the engine. They can be shared between models, or if a model needs to be unique, it needs to have a unique material. A material describes how a mesh is rendered - things like diffuse, specular and shader model are all controlled by the material.</p>
+
+
+				</div>
+				<hr>
+				
+							<!-- footer -->
+			<div style = "width:70%; margin-left:30%; padding:0; padding-left:5%; display:inline-block;">
+				<i>				
+				copyrights<br>
+				terms of service<br>
+				privacy policy<br>
+				parent company logo<br>
+				product logo<br>
+				</i>
+			</div>				
+		</div>
+		
+	</body>
+</html>
