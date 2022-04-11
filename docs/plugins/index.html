@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset = "utf-8">
-		<title>Index</title>
+		<title>Plugins</title>
 		
 		<!-- styles -->
 		
@@ -14,6 +14,8 @@
 			h5 { font-size:120%; text-decoration:none; font-weight: 200; }
 			h6 { font-size:110%; text-decoration:none; font-weight: 200; }
 			
+			a { text-decoration:none; color:#00f; }
+			a:hover { color:#0aa; }
 			
 			.sidebar
 			{
@@ -25,8 +27,17 @@
 				display:inline-block; 
 				padding:0; padding-left:5%;
 				overflow-x:hidden; overflow-y:auto;
-				background-color:#ddd; color:#121212;
+				background-color:#ddd; color:#121212;				
 			}
+			
+			.sidebar ul
+			{				
+				<!--padding:0; -->
+				list-style-type: none;
+			}
+			
+			.sidebar ul li ul { list-style-type:none; padding:0; transition: 0.3s; }
+			.sidebar ul li:hover > ul { padding: 5px; display:block; box-shadow: 5px 0 0 #0ff; }
 		</style>
 		<!-- scripts -->		
 	</head>
@@ -50,11 +61,8 @@
 				<div class = "sidebar">
 					<h1 style= "padding:0;">Docs</h1>
 					<hr>					
-					
-					<ul>												
-					<!-- <ul>
-  
-</ul> -->
+										
+					<a href = "/">Home</a>
 					<ul class = 'nav-bar'>
 <li><a href = '\docs\ai\'>ai</a>
     <ul class = 'nav-bar'>
@@ -268,6 +276,10 @@
     </li>
     </ul>
 </li>
+<li><a href = '\docs\profiling\'>profiling</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
 <li><a href = '\docs\publishing\'>publishing</a>
     <ul class = 'nav-bar'>
     </ul>
@@ -337,19 +349,29 @@
     </ul>
 </li>
 </ul>
-						
+					
 				</div>
 				
 				<!-- header layout -->
 				<div style = "width:70%; padding:0; margin:0; margin-left:30%; display:inline-block; color:#121212; font-weight:300;">
-									
-							<h1 style = "margin-left:5vw; padding:0;"> Index</h1>
-								
+				<h1 style = "margin-left:5vw; padding:0;"> Plugins</h1>
 				<hr>
 				</div>
 				
 				<div style = "width:60%; min-height:100vh; padding-left:5%;padding-right:5%;padding-top:1em; margin-left:30%; display:inline-block;">															
-					
+					<h1 id="overview">Overview</h1>
+<p>Plugins are supported at the editor level - in fact, most of the editor modules have been implemented as plugins, such as asset loading, conditioning and even management. Generally, plugins should try not perform intensive or repeated tasks, instead leaving that to the core engine whenever possible.</p>
+
+<h1 id="default-plugins">Default Plugins</h1>
+<p>Asset Loaders - by using plugins for asset loaders, the design team doesn’t need to convert their assets into a specific format for the engine to use - just copy the files straight into the engine, register your plugin, and reload the editor. It’s as easy as that. When the project is built, all assets will be converted into a standard format, ready for the builtin engine loader to read from. The editor provides a few plugin asset loaders out of the box to load common image and model formats.</p>
+
+<p>Asset Generators - most of the tools used to generate assets in the editor have been implemented as plugins. This means that they can’t be accessed through script, and restricts their usage to within the editor since plugins aren’t packaged with the final game.</p>
+
+<h1 id="writing-a-plugin">Writing a Plugin</h1>
+<p>All plugins for the editor are written in C. In order for a plugin to be registered by the engine, it needs to provide Hook, ValidFor, Process, and Unhook  functions that are non name-mangled and visible in the global scope.</p>
+
+<h1 id="importing-a-plugin">Importing a Plugin</h1>
+<p>Just download the plugin and copy it into either the project Plugins folder or the editor plugins folder. The editor provides an interface to do this. If the plugin is copied into the editor folder, it will be loaded for all projects made on the machine, whilst if the plugin is copied into the project folder it will be restricted to only being loaded alongside that project.</p>
 
 				</div>
 				<hr>
@@ -368,7 +390,7 @@
 				all content on this site is protected under copyright law. 
 				<br>
 				copyright 2022 - Kye Cunningham.
-				<br>
+				<br><br><br>
 			</div>				
 		</div>
 		

@@ -14,6 +14,8 @@
 			h5 { font-size:120%; text-decoration:none; font-weight: 200; }
 			h6 { font-size:110%; text-decoration:none; font-weight: 200; }
 			
+			a { text-decoration:none; color:#00f; }
+			a:hover { color:#0aa; }
 			
 			.sidebar
 			{
@@ -25,8 +27,17 @@
 				display:inline-block; 
 				padding:0; padding-left:5%;
 				overflow-x:hidden; overflow-y:auto;
-				background-color:#ddd; color:#121212;
+				background-color:#ddd; color:#121212;				
 			}
+			
+			.sidebar ul
+			{				
+				<!--padding:0; -->
+				list-style-type: none;
+			}
+			
+			.sidebar ul li ul { list-style-type:none; padding:0; transition: 0.3s; }
+			.sidebar ul li:hover > ul { padding: 5px; display:block; box-shadow: 5px 0 0 #0ff; }
 		</style>
 		<!-- scripts -->		
 	</head>
@@ -50,11 +61,8 @@
 				<div class = "sidebar">
 					<h1 style= "padding:0;">Docs</h1>
 					<hr>					
-					
-					<ul>												
-					<!-- <ul>
-  
-</ul> -->
+										
+					<a href = "/">Home</a>
 					<ul class = 'nav-bar'>
 <li><a href = '\docs\ai\'>ai</a>
     <ul class = 'nav-bar'>
@@ -268,6 +276,10 @@
     </li>
     </ul>
 </li>
+<li><a href = '\docs\profiling\'>profiling</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
 <li><a href = '\docs\publishing\'>publishing</a>
     <ul class = 'nav-bar'>
     </ul>
@@ -337,29 +349,23 @@
     </ul>
 </li>
 </ul>
-						
+					
 				</div>
 				
 				<!-- header layout -->
 				<div style = "width:70%; padding:0; margin:0; margin-left:30%; display:inline-block; color:#121212; font-weight:300;">
-									
-							<h1 style = "margin-left:5vw; padding:0;"> Home</h1>
-								
+				<h1 style = "margin-left:5vw; padding:0;"> Home</h1>
 				<hr>
 				</div>
 				
 				<div style = "width:60%; min-height:100vh; padding-left:5%;padding-right:5%;padding-top:1em; margin-left:30%; display:inline-block;">															
 					<h1 id="overview">Overview</h1>
-<p>Particle Engine is a high performance game engine, written from the ground up to take advantage of modern hardware. It provides a simple interface for the developer to take advantage of the GPU in almost every task, from mathematical functions to asset loading. Its’ custom rendering pipeline can handle thousands of lights at realtime framerates. The state-of-the-art material system provides a broad spectrum of material customisation options, from transparency to emission.</p>
+<p>Particle Engine is a high performance game engine, written from the ground up to take advantage of modern hardware. It provides a simple interface for the developer to use the GPU in almost every task, from mathematical functions to asset loading. Asynchronous functions and preloading capabilities ensure that the engine runs with as few stutters as possible, all while rendering thousands of lights at realtime framerates. The state-of-the-art material system provides a broad spectrum of material customisation options, from transparency to emission.</p>
+
+<p>Since its inception, this engine has had thousands of hours of work put into polishing every facet of its inner workings to provide a smooth and intuitive experience in the editor. And for those cases where we just haven’t got what you need, we support a plugin system where you can add your own tools on top of the existing engine.</p>
 
 <p><a href="/">go back</a></p>
 
-<h2 id="news">News</h2>
-<ul>
-  <li>New workflow introduced!</li>
-  <li>New assets on the store!</li>
-  <li>Version 1.0 Beta released!</li>
-</ul>
 
 				</div>
 				<hr>
@@ -378,7 +384,7 @@
 				all content on this site is protected under copyright law. 
 				<br>
 				copyright 2022 - Kye Cunningham.
-				<br>
+				<br><br><br>
 			</div>				
 		</div>
 		

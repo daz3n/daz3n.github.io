@@ -2,13 +2,61 @@
 <html>
 	<head>
 		<meta charset = "utf-8">
-		<title> Home </title>
+		<title>I Made A Site!</title>
+		
+		<style>
+			h1 {font-size:200%; font-weight:200; }
+			h2 {font-size:160%; font-weight:200; }
+			h3 {font-size:140%; font-weight:200; }
+			h4 {font-size:130%; font-weight:200; }
+			h5 {font-size:120%; font-weight:200; }
+			h6 {font-size:110%; font-weight:200; }			
+			
+			a { text-decoration:none; color: #0af; }
+			a:hover { text-decoration:none; color: #0a4; }
+			
+			.section 
+			{
+				width: 80%; margin: auto; box-shadow: inset 0 0 1px #000;
+				transition: 0.3s;
+			}
+			.section:hover
+			{				
+				box-shadow: inset 1px 1px 0px #000,inset -1px -1px 0px #000;
+			}			
+		</style>
+		
 	</head>
 
-	<body>
-		<h1 id="this-will-eventually-be-the-home-page-and-lead-to-the-documentation-tutorials-and-other-things">This will eventually be the home page, and lead to the documentation, tutorials, and other things</h1>
+	<body style = "padding:0; margin:0; font-family:system-ui,Arial,sans-serif;">
+		<div> <!-- page wrapper -->
+		
+			<div style = "height:10%; position:fixed;"> <!-- header wrapper -->
+			
+			</div> <!-- header wrapper -->
 
-<p><a href="/docs/">docs</a></p>
+			<div> <!-- content wrapper -->
+				
+				<div style = "padding:0; margin:0; text-align:center;">
+					<h1>Kye Cunningham</h1>
+					<hr>
+				</div>
+				
+				<div class = "section">
+				<h2>Particle Engine</h2>				
+				<h2><a class = "hidden" href = "/docs/">Docs</a></h2>
+				</div>
+				
+				<div class = "section">
+				<h2>Books</h2>				
+				<h2><a class = "hidden" href = "https://www.royalroad.com/profile/154886/fictions" target = "_blank">Read</a></h2>
+				</div>
+								
+			</div> <!-- content wrapper -->
 
+			<div> <!-- footer wrapper -->
+			</div> <!-- footer wrapper -->
+
+		</div> <!-- page wrapper -->
 	</body>
 </html>
