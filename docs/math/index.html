@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset = "utf-8">
-		<title>Index</title>
+		<title>Math</title>
 		
 		<!-- styles -->
 		
@@ -354,12 +354,22 @@
 				
 				<!-- header layout -->
 				<div style = "width:70%; padding:0; margin:0; margin-left:30%; display:inline-block; color:#121212; font-weight:300;">
-				<h1 style = "margin-left:5vw; padding:0;"> Index</h1>
+				<h1 style = "margin-left:5vw; padding:0;"> Math</h1>
 				<hr>
 				</div>
 				
 				<div style = "width:60%; min-height:100vh; padding-left:5%;padding-right:5%;padding-top:1em; margin-left:30%; display:inline-block;">															
-					
+					<h2 id="vector">Vector</h2>
+<p>The vector is one of the most versatile and frequently used mathematical constructs in a game. Since they are so common, care has been taken in making their operations as fast as possibile - SIMD instructions are used where possible, as well as hardware acceleration in the form of CUDA, or OpenCL.</p>
+
+<h2 id="matrix">Matrix</h2>
+<p>The matrix is one of the most frequently used mathematical constructs in graphics programming. Unfortunately, despite the benefit that hardware acceleration would provide to matrix operations, it has yet to be implemented.</p>
+
+<h2 id="quaternion">Quaternion</h2>
+<p>Quaternions are often used to represent a rotation around any arbitrary axis. They are more compact than matrices and also don’t suffer from the same issue of gimbal lock. Quaternion operations are also currently restricted to a single thread, although this is due to time constraints rather than implementation complexity.</p>
+
+<h2 id="dual-quaternion">Dual Quaternion</h2>
+<p>Dual quaternions has been used in mesh skinning to result in a higher fidelity result, however the requirement need currently doesn’t outweigh the time cost or complexity of implementation. Thus, dual quaternions are currently not supported at all in the engine, and will remain so indefinitely.</p>
 
 				</div>
 				<hr>

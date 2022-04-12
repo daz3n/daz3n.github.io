@@ -363,7 +363,7 @@
 <p>Plugins are supported at the editor level - in fact, most of the editor modules have been implemented as plugins, such as asset loading, conditioning and even management. Generally, plugins should try not perform intensive or repeated tasks, instead leaving that to the core engine whenever possible.</p>
 
 <h1 id="default-plugins">Default Plugins</h1>
-<p>Asset Loaders - by using plugins for asset loaders, the design team doesn’t need to convert their assets into a specific format for the engine to use - just copy the files straight into the engine, register your plugin, and reload the editor. It’s as easy as that. When the project is built, all assets will be converted into a standard format, ready for the builtin engine loader to read from. The editor provides a few plugin asset loaders out of the box to load common image and model formats.</p>
+<p>Asset Loaders - by using plugins for asset loaders, the design team doesn’t need to convert their assets into a specific format for the engine to use - just copy the files straight into the editor, register your plugin, and reload the editor. It’s as easy as that. When the project is built, all assets will be converted into a standard format, ready for the builtin engine loader to read from. The editor provides a few plugin asset loaders out of the box to load common image and model formats.</p>
 
 <p>Asset Generators - most of the tools used to generate assets in the editor have been implemented as plugins. This means that they can’t be accessed through script, and restricts their usage to within the editor since plugins aren’t packaged with the final game.</p>
 
