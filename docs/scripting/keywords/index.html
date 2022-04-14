@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset = "utf-8">
-		<title>Index</title>
+		<title>Keywords</title>
 		
 		<!-- styles -->
 		
@@ -354,12 +354,57 @@
 				
 				<!-- header layout -->
 				<div style = "width:70%; padding:0; margin:0; margin-left:30%; display:inline-block; color:#121212; font-weight:300;">
-				<h1 style = "margin-left:5vw; padding:0;"> Index</h1>
+				<h1 style = "margin-left:5vw; padding:0;"> Keywords</h1>
 				<hr>
 				</div>
 				
 				<div style = "width:60%; min-height:100vh; padding-left:5%;padding-right:5%;padding-top:1em; margin-left:30%; display:inline-block;">															
-					
+					<h1 id="current-keywords">Current Keywords</h1>
+<p>null
+true
+false
+if
+else
+do
+while
+foreach
+class
+sizeof</p>
+
+<hr />
+<h2 id="things-thatd-be-nice-to-have-for-misc-purposes">Things that’d be nice to have for misc purposes</h2>
+<p>compiler.name
+compiler.vendor
+compiler.version</p>
+
+<h2 id="things-thatd-be-nice-to-have-for-generated--templated-classes">Things that’d be nice to have for generated &amp; templated classes</h2>
+<p>template
+variadic args</p>
+
+<p>environment.count.classes
+environment.count.functions
+environment.count.globals</p>
+
+<p>environment.counter[“Named Counter”].next()
+environment.counter[“Named Counter”].read()
+environment.counter[“Named Counter”].zero()</p>
+
+<p>pass operators directly as template arguments</p>
+
+<h2 id="things-thatd-be-nice-to-have-for-ultra-optimisations">Things that’d be nice to have for ultra optimisations</h2>
+<p>tag specific operations within functions as anchors - they can be replaced by any other operation of the same size, even from outside of the scope. they’re accessed the same way that an object is accessed from within a scope.</p>
+
+<p>anchor::operator::call(void)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	...
+	if (changed_classes) other_function::anchor_label = warrior::Skill1
+	...	
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	...
+	if (heal_from_damage) damage_function::anchor_label = operator::add::(float,float)
+	...	
+</code></pre></div></div>
 
 				</div>
 				<hr>
