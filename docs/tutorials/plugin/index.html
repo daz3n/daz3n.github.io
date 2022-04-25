@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset = "utf-8">
-		<title>Ai navigation</title>
+		<title>Plugin tutorial</title>
 		
 		<!-- styles -->
 		
@@ -366,18 +366,27 @@
 				
 				<!-- header layout -->
 				<div style = "width:70%; padding:0; margin:0; margin-left:30%; display:inline-block; color:#121212; font-weight:300;">
-				<h1 style = "margin-left:5vw; padding:0;"> AI Navigation</h1>
+				<h1 style = "margin-left:5vw; padding:0;"> Plugin Tutorial</h1>
 				<hr>
 				</div>
 				
 				<div style = "width:60%; min-height:100vh; padding-left:5%;padding-right:5%;padding-top:1em; margin-left:30%; display:inline-block;">															
-					<h1 id="introduction">Introduction</h1>
-<p>AI navigation was a topic that had been solved by Dijkstra’s algorithm. However, as maps have become larger, other solutions had to be quickly devised.</p>
+					<h1 id="hello-plugin">Hello Plugin</h1>
+<p>To create a plugin that requires a UI interface, your plugin will need to implement the logic within an update function. Each frame, the plugin will have an opportunity to perform any action in response to the UI being interacted with, in a style similair to ImGui.</p>
 
-<h1 id="navmesh">Navmesh</h1>
-<p>The engine uses a custom Hierarchial Routing algorithm to find the quickest route between points. It favours runtime speed over memory footprint, so each navmesh can take up an unexpectedly large amount of memory.</p>
+<h2 id="project-setup">Project Setup</h2>
+<p>The only requirement of a plugin is that it inherits from the base plugin interface used internally in the engine. To do this, you will need to download and install both the lib and header file of the plugin interface, to inherit from your plugin.</p>
 
-<h1 id="obstacles">Obstacles</h1>
+<p>If you want to provide an interactive interface, you will need to also download and reference both the header and dll of the UI module in your plugin.</p>
+
+<hr />
+
+<p>Instead of building an executable, change the project settings to dll. When building, the final step is to copy the output dll (without attached lib or pdb if building in debug) into the plugin directory of your project.</p>
+
+<h2 id="plugin-behaviour">Plugin Behaviour</h2>
+<p>For a plugin to have any functionality, it needs to implement functionality in its hooks. This can generally be anything you want, although large tasks should be completed asynchronously, using the provided API. This will prevent stalling or crashes in the editor, unless the plugin is poorly formed.</p>
+
+<hr />
 
 				</div>
 				<hr>

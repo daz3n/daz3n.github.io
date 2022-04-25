@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset = "utf-8">
-		<title>Ai navigation</title>
+		<title>Giving your plugin ui</title>
 		
 		<!-- styles -->
 		
@@ -366,18 +366,34 @@
 				
 				<!-- header layout -->
 				<div style = "width:70%; padding:0; margin:0; margin-left:30%; display:inline-block; color:#121212; font-weight:300;">
-				<h1 style = "margin-left:5vw; padding:0;"> AI Navigation</h1>
+				<h1 style = "margin-left:5vw; padding:0;"> Giving your Plugin UI</h1>
 				<hr>
 				</div>
 				
 				<div style = "width:60%; min-height:100vh; padding-left:5%;padding-right:5%;padding-top:1em; margin-left:30%; display:inline-block;">															
-					<h1 id="introduction">Introduction</h1>
-<p>AI navigation was a topic that had been solved by Dijkstra’s algorithm. However, as maps have become larger, other solutions had to be quickly devised.</p>
+					<h1 id="overview">Overview</h1>
+<p>If writing anything other than an asset loader, you will probably want to integrate UI straight into the editor. When writing a plugin, the only steps you really need to take are to use the UI header that comes with the engine, and link against the UI.dll to build your solution. The API is designed to be similar enough to Dear ImGui that using it should already feel natural to those who have used Dear ImGui before.</p>
 
-<h1 id="navmesh">Navmesh</h1>
-<p>The engine uses a custom Hierarchial Routing algorithm to find the quickest route between points. It favours runtime speed over memory footprint, so each navmesh can take up an unexpectedly large amount of memory.</p>
+<h1 id="setting-up">Setting Up</h1>
 
-<h1 id="obstacles">Obstacles</h1>
+<h1 id="header-files">Header Files</h1>
+<ul>
+  <li>plugin</li>
+  <li>optional UI</li>
+</ul>
+
+<h3 id="hasupdate">HasUpdate</h3>
+<h3 id="isloader">IsLoader</h3>
+
+<h1 id="init">Init</h1>
+
+<h1 id="update">Update</h1>
+
+<h1 id="canload">CanLoad</h1>
+<h1 id="tryload">TryLoad</h1>
+
+<h1 id="build">Build</h1>
+<p>Each plugin that the engine uses MUST be compiled as a Windows .dll, or a Linux .so.</p>
 
 				</div>
 				<hr>
