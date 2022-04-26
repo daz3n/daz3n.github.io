@@ -4,48 +4,36 @@
 		<meta charset = "utf-8">
 		<title>I Made A Site!</title>
 		
-		<style>
-			h1 {font-size:200%; font-weight:200; }
-			h2 {font-size:160%; font-weight:200; }
-			h3 {font-size:140%; font-weight:200; }
-			h4 {font-size:130%; font-weight:200; }
-			h5 {font-size:120%; font-weight:200; }
-			h6 {font-size:110%; font-weight:200; }			
-			
-			a { text-decoration:none; color: #0af; }
-			a:hover { text-decoration:none; color: #0a4; }
-			
-			.section 
-			{
-				width: 80%; margin: auto; box-shadow: inset 0 0 1px #000;
-				transition: 0.3s;
-			}
-			.section:hover
-			{				
-				box-shadow: inset 1px 1px 0px #000,inset -1px -1px 0px #000;
-			}			
-		</style>
+		<!-- styles -->	
+		<link id = "theme" rel="stylesheet" href="/assets/themes/dark.css">
+		<link rel="stylesheet" href="/assets/styles/common.css">		
 		
+		<!-- scripts -->
+		<script src="/assets/scripts/theme.js"></script>
 	</head>
 
-	<body style = "padding:0; margin:0; font-family:system-ui,Arial,sans-serif;">
+	<body style = "padding:0; margin:0;" onload = "setTheme(getTheme());">
 		
 <!--		
 	<video autoplay muted loop style = "min-width:100%;min-height:100%;position:fixed; bottom:0;right:0; z-index:-1;">
 		<source src = "https://thumbs.gfycat.com/AnchoredSoulfulCapeghostfrog-mobile.mp4">
 	</video>
--->
-	<video autoplay muted loop style = "min-width:100vw;min-height:100vh;position:fixed; bottom:0;right:0; z-index:-1; filter:invert(100%);">		
+
+	<video autoplay muted loop style = "min-width:100vw;min-height:100vh;position:fixed; bottom:0;right:0; z-index:-1;">		
 		<source src = "https://thumbs.gfycat.com/AdventurousNeatGrayreefshark-mobile.mp4"> 
 	</video>
-	
+-->	
 		<div style = "margin-bottom:0;"> <!-- page wrapper -->
 		
 			<div style = "height:100vh;"> <!-- content wrapper -->
 				
 				<div style = "padding:0; margin:0; text-align:center;">
 					<h1>Kye Cunningham</h1>
-					<hr>
+					<hr>				
+				</div>
+				
+				<!-- style selector -->
+				<div style = "position:absolute; top:1em; right:1em; width:50px; height:50px; border-radius:50%; background-color:currentColor; box-shadow: inset 0px 0px 25px #888;" onclick = "hackyToggleTheme();">				
 				</div>
 				
 				<div class = "section">
@@ -55,17 +43,29 @@
 				
 				<div class = "section">
 				<h2>Books</h2>				
-				<h2><a class = "hidden" href = "https://www.royalroad.com/profile/154886/fictions" target = "_blank">Read</a></h2>
+				
+				
+				<h2><a class = "hidden" href = "/books/ash-remains.html" target = "_blank">Ash Remains</a></h2>				
+				
+				<h2><a class = "hidden" href = "/books/cult.html" target = "_blank">Cult</a></h2>				
+				
+				<h2><a class = "hidden" href = "/books/shellshock.html" target = "_blank">Shellshock</a></h2>				
+				
+				<h2><a class = "hidden" href = "/books/the-legendary-craftsman.html" target = "_blank">The Legendary Craftsman</a></h2>				
+				
+				
+				<h2><a class = "hidden" href = "https://www.royalroad.com/profile/154886/fictions" target = "_blank">More</a></h2>			
 				</div>
+				
 								
 			</div> <!-- content wrapper -->
 
-			<div style = "background-color:#fff; margin:0;padding:0; position:absolute; left:0; top:100vh;width:100%;">
+			<div style = "margin:0;padding:0; position:absolute; left:0; top:100vh;width:100%;">
 				<h2>Contact Me</h2>
 				<hr>
-				<a href = "#"><h2>Email</h2></a>
-				<a href = "#"><h2>Github</h2></a>
-				<a href = "#"><h2>Linkedin</h2></a>
+				<h2><a href = "#">Email</a></h2>
+				<h2><a href = "#">Github</a></h2>
+				<h2><a href = "#">Linkedin</a></h2>
 			</div>
 
 		</div> <!-- page wrapper -->

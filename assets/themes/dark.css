@@ -1,0 +1,26 @@
+
+h1, h2, h3, h4, h5, h6, p, div { color:#fff; }
+
+a { color: #0aa; }
+a:hover { color: #0ff; }
+
+body
+{
+	background-color: #121212;
+	color:#fff;
+}
+
+.sidebar
+{
+	background-color:#000;	
+	color:#fff;
+}
+.sidebar ul
+{				
+	<!--padding:0; -->
+	list-style-type: none;
+}
+
+.sidebar ul li:hover > ul { box-shadow: 5px 0 0 #0ff; }
+
+
