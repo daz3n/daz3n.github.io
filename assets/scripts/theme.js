@@ -3,7 +3,6 @@ function setTheme(name)
 {
 	document.getElementById("theme").setAttribute("href","/assets/themes/" + name + ".css");	
 	document.cookie = "theme=" + name + "; path =/;";
-	alert('setting theme to ' + name);
 }
 
 function getCookie(name)

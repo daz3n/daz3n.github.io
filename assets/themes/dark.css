@@ -10,6 +10,11 @@ body
 	color:#fff;
 }
 
+video
+{
+	filter:blur(5px);
+}
+
 .sidebar
 {
 	background-color:#000;	
