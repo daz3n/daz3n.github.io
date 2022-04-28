@@ -8,11 +8,11 @@
 		<link id = "theme" rel="stylesheet" href="/assets/themes/dark.css">
 		<link rel="stylesheet" href="/assets/styles/common.css">		
 		<!-- scripts -->
-		<script src="/assets/scripts/theme.js"></script>
+		<script src="/assets/scripts/theme.js" onload = "setTheme(getTheme());"></script>
 		
 	</head>
 		
-	<body style = "margin:0; padding:0; overflow-x: hidden;" onload = "setTheme(getTheme());">		
+	<body style = "margin:0; padding:0; overflow-x: hidden;">
 		<!-- header -->			
 		<!-- header -->
 		
@@ -290,6 +290,10 @@
     </li>
     <li><a href = '\docs\scripting\keywords\'>keywords</a>
         <ul class = 'nav-bar'>
+        <li><a href = '\docs\scripting\keywords\examples\'>examples</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
         </ul>
     </li>
     </ul>
@@ -341,9 +345,8 @@
 				</div>
 				
 				<!-- style selector -->
-				<div style = "position:absolute; top:1em; right:1em; width:50px; height:50px; border-radius:50%; background-color:currentColor; box-shadow: inset 0px 0px 25px #888;" onclick = "hackyToggleTheme();">				
+				<div class = "theme-selector" onclick = "hackyToggleTheme();">
 				</div>
-				
 				
 				
 				<div style = "width:60%; min-height:100vh; padding-left:5%;padding-right:5%;padding-top:1em; margin-left:30%; display:inline-block;">															
@@ -356,7 +359,21 @@
 <p>Asset Generators - most of the tools used to generate assets in the editor have been implemented as plugins. This means that they can’t be accessed through script, and restricts their usage to within the editor since plugins aren’t packaged with the final game.</p>
 
 <h1 id="writing-a-plugin">Writing a Plugin</h1>
-<p>All plugins for the editor are written in C. In order for a plugin to be registered by the engine, it needs to provide Hook, ValidFor, Process, and Unhook  functions that are non name-mangled and visible in the global scope.</p>
+<p>All plugins for the editor are written in C. In order for a plugin to be registered by the engine, it needs a loader.</p>
+
+<h3 id="loader-functions">Loader Functions</h3>
+<h4 id="getnext">GetNext</h4>
+<p>is called to load each plugin. When each plugin has been loaded, it should return 0 to indicate success.</p>
+
+<h3 id="plugin-functions">Plugin Functions</h3>
+<h4 id="getcapabilities">GetCapabilities</h4>
+<p>a required function. Used to filter out actions that the plugin can’t handle.</p>
+<h4 id="canload">CanLoad</h4>
+<p>an optional function.</p>
+<h4 id="tryload">TryLoad</h4>
+<p>an optional function.</p>
+<h4 id="update">Update</h4>
+<p>an optional function.</p>
 
 <h1 id="importing-a-plugin">Importing a Plugin</h1>
 <p>Just download the plugin and copy it into either the project Plugins folder or the editor plugins folder. The editor provides an interface to do this. If the plugin is copied into the editor folder, it will be loaded for all projects made on the machine, whilst if the plugin is copied into the project folder it will be restricted to only being loaded alongside that project.</p>

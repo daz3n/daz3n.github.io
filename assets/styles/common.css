@@ -6,7 +6,8 @@ h4 { font-size:130%; font-weight:200; padding:0; }
 h5 { font-size:120%; font-weight:200; padding:0; }
 h6 { font-size:110%; font-weight:200; padding:0; }			
 
-a { text-decoration:none;  }
+a { text-decoration:none; }
+a:hover { text-decoration:bold; }
 
 body
 {
@@ -36,14 +37,47 @@ body
 	height:100vh; 
 	display:inline-block; 
 	padding:0; padding-left:5%;
-	overflow-x:hidden; overflow-y:auto;		
+	overflow-x:hidden; overflow-y:auto;	
+	
+	/* --highlight:#f0f; this has to be defined in each theme! */
 }
 
-.sidebar ul
+
+.sidebar ul { padding-right:0; }
+
+.sidebar ul li { padding:0; transition:0.3s; }
+.sidebar ul li:hover { padding-left:5px; padding-right:5px; box-shadow: 5px 0 0 var(--highlight);}
+
+.sidebar ul li ul { list-style-type:none; padding:0; }
+
+.sidebar a { display:block; padding:0; box-shadow: inset -0px 0px 0px currentColor; transition: 0.2s; }
+.sidebar ul a:hover { box-shadow: inset -15px 0px 3px currentColor; transition: 0.4s; }
+
+
+.theme-selector 
+{
+	position:absolute; 
+	top:1em; 
+	right:1em; 
+	width:50px; 
+	height:50px; 
+	border-radius:50%;
+	background-color:currentColor;
+	transition:1.2s;
+}
+
+.theme-selector:hover
 {				
-	<!--padding:0; -->
-	list-style-type: none;
+	box-shadow: 	
+	inset 0px 0px 24px #0a0,
+	inset 0px 0px 24px #00f,
+	0px 0px 8px #0a0,
+	0px 0px 8px #00f;
 }
 
-.sidebar ul li ul { list-style-type:none; padding:0; transition: 0.3s; }
-.sidebar ul li:hover > ul { padding: 5px; display:block; }
+
+
+
+
+
+

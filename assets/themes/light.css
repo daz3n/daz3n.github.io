@@ -1,8 +1,8 @@
 
 h1, h2, h3, h4, h5, h6, p, div { color:#121212; }
 
-a { color: #0cc; }
-a:hover { color: #0aa; }
+a { color: #08c; }
+a:hover { color: #0ad; }
 
 body
 {
@@ -24,12 +24,6 @@ video
 .sidebar
 {
 	background-color:#ddd;
-	color:#000;
+	color:#101010;
+	--highlight: #0ad;
 }
-.sidebar ul
-{				
-	<!--padding:0; -->
-	list-style-type: none;
-}
-
-.sidebar ul li:hover > ul { box-shadow: 5px 0 0 #0ff; }
