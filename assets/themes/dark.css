@@ -24,3 +24,11 @@ video
 
 
 
+.section
+{
+	background-color:#000;
+}
+.section:hover 
+{
+	background-color:#121212;
+}
