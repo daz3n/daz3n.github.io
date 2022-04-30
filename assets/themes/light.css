@@ -31,3 +31,23 @@ video
 	color:#101010;
 	--highlight: #0ad;
 }
+
+.menu-dropdown
+{
+	background-color:#eee;
+}
+/*
+.theme-selector::before
+{
+	font-family:"FontAwesome";	
+	content: "\f186";
+	font-weight: 100;	
+	font-size:3em;	
+}
+*/
+
+.theme-selector
+{
+	border-radius:100%;
+	box-shadow: 0px 0px 0px 1px #000;
+}

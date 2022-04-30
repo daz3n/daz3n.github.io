@@ -5,20 +5,15 @@
 		<title>I Made A Site!</title>
 		
 		<!-- styles -->	
-		<link id = "theme" rel="stylesheet" href="/assets/themes/dark.css">
+		<link rel="stylesheet" href="/assets/themes/dark.css" id = "theme">
 		<link rel="stylesheet" href="/assets/styles/common.css">		
-		
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+
 		<!-- scripts -->
 		<script src="/assets/scripts/theme.js" onload = "setTheme(getTheme());"></script>
 	</head>
 
 	<body style = "padding:0; margin:0;">
-	
-	<!--
-	<video autoplay muted loop style = "min-width:100%;min-height:100%; z-index:-1;">
-		<source src = "https://thumbs.gfycat.com/AnchoredSoulfulCapeghostfrog-mobile.mp4">
-	</video>		
-	-->
 	
 	<video autoplay muted loop style = "min-width:100vw;min-height:100vh;position:fixed; bottom:0;right:0; z-index:-1;">		
 		<source src = "https://thumbs.gfycat.com/AdventurousNeatGrayreefshark-mobile.mp4"> 
@@ -35,8 +30,33 @@
 				</div>
 				-->
 				
+				
 				<!-- style selector -->
-				<div class = "theme-selector" onclick = "hackyToggleTheme();"></div>
+				<div class = "icon-reorder icon-large menu-button" onclick = "hackyToggleTheme();"></div>				
+				
+				<div class = "menu-dropdown">					
+					<!-- header -->					
+					<div style = "padding-left:5%; padding-right:5%; padding-top:3em;">
+						<h1>About</h1>
+						<p>
+							I'm a UK based software engineer, skilled in multiple frameworks and tech stacks.							
+						</p>
+						<p>
+							I hold a passion for graphical programming, and have spent the last 4 years writing a game engine 
+							to recreate the high fidelity graphics seen in triple A games today.
+						</p>						
+					</div>
+
+					<!-- content -->
+					<!-- footer -->					
+					<div style = "padding-left:5%; padding-right:5%; padding-bottom:5em; text-align:right;">
+						<hr>
+						<h2>Contact Me</h2>				
+						<a href = "mailto:kyecunningham53@gmail.com"><i class="icon-fixed-width icon-large icon-envelope"></i></a>
+						<a href = "https://github.com/daz3n"><i class="icon-fixed-width icon-large icon-github"></i></a>
+						<a href = "#"><i class="icon-fixed-width icon-large icon-linkedin"></i></a>				
+					</div>
+				</div>
 				
 				<div style = "padding-top:30vh; padding-bottom:20vh; height:50vh; text-align:center; margin:0;">
 				<h1>Kye Cunningham</h1>
@@ -68,14 +88,12 @@
 				
 			</div> <!-- content wrapper -->
 
-			<div>
-				<h2 style = "padding-left:5%;">Contact Me</h2>
+			<div style = "padding-left:5%; padding-right:5%; padding-bottom:5em; text-align:right;">
 				<hr>
-				<h2 style = "padding-left:5%;"><a href = "#">Email</a></h2>
-				<h2 style = "padding-left:5%;"><a href = "#">Github</a></h2>
-				<h2 style = "padding-left:5%;"><a href = "#">Linkedin</a></h2>
-				<br>
-				<br>
+				<h2>Contact Me</h2>				
+				<a href = "mailto:kyecunningham53@gmail.com"><i class="icon-fixed-width icon-large icon-envelope"></i></a>
+				<a href = "https://github.com/daz3n"><i class="icon-fixed-width icon-large icon-github"></i></a>
+				<a href = "#"><i class="icon-fixed-width icon-large icon-linkedin"></i></a>				
 			</div>
 
 		</div> <!-- page wrapper -->

@@ -76,30 +76,59 @@ body
 
 .theme-selector 
 {
-	position:absolute; 
-	top:1em; 
-	right:1em; 
-	width:50px; 
-	height:50px; 
-	border-radius:50%;
-	background-color:currentColor;
-	opacity:0.8;
-	transition:0.3s;
+	float:right;
+	display:inline;
+	line-height:2em;
+	width:2em;
+	height:2em;
+	
+	transition:0.1s;	
+	
+	
+	z-index:1;
 }
 
 .theme-selector:hover
-{				
-	background-color:rgba(1,1,1,0);
-	box-shadow: 	
-	inset 0px 0px 12px #0a0,
-	inset 0px 0px 12px #00f,
-	0px 0px 8px #0a0,
-	0px 0px 8px #00f;
+{	
+	cursor:pointer;			
+	transform:scale(1.25);
 }
 
+.menu-button
+{
+	position:absolute; 
+	top:2em;
+	right:2em; 
+	font-size:300;
+	z-index:1;
+}
+.menu-button:hover 
+{
+	cursor:pointer;
+}
 
+.menu-dropdown
+{
+	position:fixed;
+	top:0;
+	right:0;
+	
+	transition:0.3s;	
+	height:100%;
+	width:30%;
+	transform:translate(calc(100% - 1px),0px);
+	overflow-y:scroll;	
+}
 
+.menu-button:hover + .menu-dropdown
+{
+	transform:translate(0px,0px);
+	
+}
 
-
+.menu-dropdown:hover 
+{
+	transform:translate(0px,0px);
+}
 
 
