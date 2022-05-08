@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>  </title>
+		
+		<!-- styles -->				
+		<link id = "theme" rel="stylesheet" href="/assets/themes/dark.css">
+		<link rel="stylesheet" href="/assets/css/common.css">		
+		<!-- scripts -->
+		<script src="/assets/scripts/theme.js" onload = "setTheme(getTheme());"></script>
+		
+	</head>
+
+	<body>
+		<style>
+	.theme-select { box-shadow: 0px 0px 1px currentColor; padding:1em; margin:1em; transition:0.2s; }
+	.theme-select:hover { box-shadow: 0px 0px 8px currentColor, inset 400px 0px 1px #999, inset -400px 0px 1px #999; }
+
+</style>
+
+<h1>Settings</h1>
+
+<h4>Theme</h4>
+
+
+
+
+	<div class = "theme-select" onclick ="setTheme( 'code blue' );"> - code blue </div>
+
+	<div class = "theme-select" onclick ="setTheme( 'code red' );"> - code red </div>
+
+	<div class = "theme-select" onclick ="setTheme( 'dark' );"> - dark </div>
+
+	<div class = "theme-select" onclick ="setTheme( 'light' );"> - light </div>
+
+<hr>
+
+
+	</body>
+</html>

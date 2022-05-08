@@ -28,7 +28,9 @@ function getCookie(name)
 
 function getTheme()
 {
-	return getCookie('theme');
+	var t = getCookie('theme'); 
+	if (t == null) return 'light'
+	return t;
 }
 
 function hackyToggleTheme()
