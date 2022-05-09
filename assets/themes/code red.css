@@ -1,8 +1,8 @@
 
 h1, h2, h3, h4, h5, h6, p, div { color:#aa8; }
 
-a { color: #dda; }
-a:hover { color: #ffa; }
+a { color: #f80; }
+a:hover { color: #f30; }
 
 body
 {
@@ -11,9 +11,16 @@ body
 
 video
 {
-	filter:blur(20px);
+	filter:contrast(250%) blur(5px);
 }
-
+video:before 
+{
+	content: 'why no worky :(';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(255,0,255,0.2); //Change as per your requirement
+}
 
 .section
 {
@@ -28,7 +35,7 @@ video
 
 .menu-button:hover 
 {	
-	filter:invert(30%);	
+	filter: contrast(130%);
 }
 .sidebar
 {
