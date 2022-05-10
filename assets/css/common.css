@@ -118,12 +118,5 @@ body
 
 .theme-text
 {
-	transition:0.2s;
-	
-	box-shadow: inset 0px 0px 0px #f80;	
-}
-.theme-text:hover 
-{
-	cursor:pointer;	
-	color:#fa0;
+	transition:0.2s;	
 }

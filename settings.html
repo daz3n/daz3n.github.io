@@ -14,17 +14,19 @@
 
 	<body>
 		<style>
-	.theme-select { box-shadow: 0px 0px 1px currentColor; padding:1em; margin:1em; transition:0.2s; }
-	.theme-select:hover { box-shadow: 0px 0px 8px currentColor, inset 400px 0px 1px #999, inset -400px 0px 1px #999; }
+	.theme-select { box-shadow: 0px 0px 1px currentColor; padding:1em; margin-bottom:1em; transition:0.2s; }
+	.theme-select:hover { box-shadow: 0px 0px 8px currentColor; cursor:pointer; }
 
 </style>
 
-<h1>Settings</h1>
+<div style = "width:50vw; margin-left:3em;">
+	<h1>Settings</h1>
+	<h4 class = "theme-text">Theme &nbsp - &nbsp </h4>
+</div>
 
-<h4>Theme</h4>
 
 
-
+<div style = "width:30vw; margin-left:3em;">
 
 	<div class = "theme-select" onclick ="setTheme( 'blossom' );"> - blossom </div>
 
@@ -37,6 +39,10 @@
 	<div class = "theme-select" onclick ="setTheme( 'light' );"> - light </div>
 
 	<div class = "theme-select" onclick ="setTheme( 'lite' );"> - lite </div>
+
+	<div class = "theme-select" onclick ="setTheme( 'roman' );"> - roman </div>
+
+</div>
 
 <hr>
 

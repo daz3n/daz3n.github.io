@@ -1,0 +1,70 @@
+
+h1, h2, h3, h4, h5, h6 { color:#000; }
+p, div { color:#000; }
+
+a { color: #ca4; font-style: italic; }
+a:hover { color: #860; }
+
+body
+{
+	background-color: #ffe;
+	color:#000;
+}
+
+video
+{
+	filter: invert(100%) blur(10px);
+}
+
+.sidebar
+{
+	background-color:#310;	
+	color:#fff;
+	--highlight: #0ff;
+}
+
+
+
+.section
+{
+	transition:0.2s;
+	background-color:#310;
+}
+
+.section:hover 
+{
+	background-color:#401000;	
+}
+.menu-dropdown
+{
+	background-color:#401000;
+}
+
+.menu-button:hover 
+{	
+	color:#ca4;
+}
+
+.theme-selector
+{
+	border-radius:100%;
+	box-shadow: 0px 0px 0px 1px #eee;
+}
+
+
+
+.section > h2
+{
+	font-weight:400;
+}
+
+.sidebar > h1 
+{
+	font-weight:400;
+}
+
+
+.theme-text::after
+{
+	content:'Roman';
+}

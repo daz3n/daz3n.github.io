@@ -59,7 +59,7 @@ video
 	box-shadow: 0px 0px 0px 1px #000;
 }
 
-.theme-text::before
+.theme-text::after
 {
-	content:'Light';
+	content:'Code Blue';
 }
