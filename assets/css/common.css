@@ -18,6 +18,29 @@ body
   width: 0px;
 }
 
+@media only screen and (max-width: 800px) {
+	.hero 
+	{
+		padding-top:10vh; 
+		padding-bottom:10vh; 
+		height:30vh; 
+		text-align:center; 
+		margin:0;
+	}
+}
+@media only screen and (min-width: 800px) {
+
+.hero 
+{
+	padding-top:30vh; 
+	padding-bottom:20vh; 
+	height:50vh; 
+	text-align:center; 
+	margin:0;
+}
+
+}
+
 .section 
 {
 	width: 80%; 

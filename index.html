@@ -16,6 +16,28 @@
 
 		<!-- scripts -->
 		<script src="/assets/scripts/theme.js" onload = "setTheme(getTheme());"></script>
+		
+		
+		<!-- 
+			this has to be here because chrome caches the page even if explicitly told not to, 
+			so it looks like the theme hasnt been changed when pressing the back arrow.
+			to fix this, just check if we reached the page by clicking back, and if so,
+			manually reload the theme regardless of if it changed or not
+		-->			
+		<script>		
+			var perfEntries = performance.getEntriesByType("navigation");
+			for (var i = 0; i < perfEntries.length; i++) {
+				console.log(perfEntries[i].type);				
+			}
+			
+			if (perfEntries.length > 0)
+			{
+				if (perfEntries[0] === 'back_forward')
+				{
+					setTheme(getTheme());					
+				}
+			}
+		</script>
 	</head>
 
 	<body style = "padding:0; margin:0;">
@@ -82,7 +104,7 @@
 				
 			
 			
-				<div style = "padding-top:30vh; padding-bottom:20vh; height:50vh; text-align:center; margin:0;">
+				<div class = "hero">
 				<h1>Kye Cunningham</h1>
 				<p>Software Engineer and Author</p>
 					

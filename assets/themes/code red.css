@@ -11,19 +11,13 @@ body
 
 video
 {
-	filter:contrast(250%) blur(5px);
-}
-video:before 
-{
-	content: 'why no worky :(';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: rgba(255,0,255,0.2); //Change as per your requirement
+	filter:contrast(120%) blur(8px);
 }
 
 .section
 {
+	/* background: 001515 */
+	/* text: aa8,f80  */
 	transition:0.3s;
 	background-color:#000510;
 	box-shadow: inset 0px 0px 0px #aa8;
