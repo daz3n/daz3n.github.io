@@ -353,6 +353,12 @@
 					<h1 id="overview">Overview</h1>
 <p>The visual component of a game is often the most heavily praised - or criticised - before anything else. Because it plays such an important role in how the final product is recieved, we’ve spent a long time on improving both the graphics workflow and the speed of the scene draw inside the engine.</p>
 
+<h1 id="settings">Settings</h1>
+
+<p>By default, the engine uses a tiled forward shading pipeline. This allows for the usage of many more light sources than conventional means, including traditional deferred rendering. The engine does also provide a deferred pipeline, although it imposes many more restrictions on the shaders, scenes, and materials.</p>
+
+<p>Additionally, shadow settings are set on a per-project basis, with the resolution and cascade number exposed to the development team to edit. If this is left, the engine will try balance out the shadow settings to retain realtime framerates.</p>
+
 <h1 id="how-to">How To</h1>
 
 <h2 id="brief">Brief</h2>

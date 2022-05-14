@@ -433,8 +433,7 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	i8 array1[5];
 	i8 array2[5 * 2 + 1];
 </code></pre></div></div>
-<p>Trying to create an array of size 0 or negative size will result in a compile-time error. 
-Arrays can also be procedurally created at compile-time by accessing compiler metadata.</p>
+<p>Trying to create an array of size 0 or negative size will result in a compile-time error. Arrays can also be procedurally created at compile-time by accessing compiler metadata.</p>
 
 <h3 id="defining-a-class">Defining a class</h3>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	class myClass
@@ -442,7 +441,7 @@ Arrays can also be procedurally created at compile-time by accessing compiler me
 		...
 	}
 </code></pre></div></div>
-<p>A class can have an optional constructor and destructor, although they aren’t compulsory.</p>
+<p>A class can have an optional constructor and destructor, although they aren’t compulsory. If one isn’t provided, then the compiler will attempt to create a default constructor.</p>
 
 <h3 id="defining-a-function">Defining a function</h3>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	i8 add(i8 a, i8 b)
@@ -451,7 +450,7 @@ Arrays can also be procedurally created at compile-time by accessing compiler me
 	}
 </code></pre></div></div>
 
-<p>note that default arguments aren’t currently supported in flow.</p>
+<p>note that default arguments aren’t currently supported in flow. Here, a temporary of type i8 is returned from the function ‘add’.</p>
 
 <h3 id="defining-an-enumeration">Defining an enumeration</h3>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	enum myEnum
@@ -471,18 +470,54 @@ Arrays can also be procedurally created at compile-time by accessing compiler me
 	while x &gt; 5 { ... } 
 </code></pre></div></div>
 
+<p>Just like in many other languages. Any boolean expression after the if keyword is evaluated at runtime to pick a branch.</p>
+
+<h3 id="notes">Notes</h3>
+
+<p>During compilation, checks can be made to require arrays of a minimum size to be passed into functions. In other words, syntax like this is legal.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void my_func(int my_input_array[5])
+{
+	...
+}
+</code></pre></div></div>
+
+<p>Here, my_func is able to take any array whose size is known at compile time, as long as its’ size is equal to or greater than 5. The array isn’t copied, instead a reference to the beginning of the array is passed into the function in a similar style to C++. The main difference is that this allows an additional layer of compile-time security - trying to use raw pointers or arrays that are too small will result in a much safer, and more predictable, compile time error.</p>
+
 <h2 id="compiler-optimisation-steps">Compiler optimisation steps</h2>
 
-<p>[x] constexpr arithmetic
- [x] constexpr boolean evaluation
- [x] primitive self assignment trim
- [ ] expression dependancy graphs
- [ ] module dependancy graphs
- [ ] constexpr functions
- [ ] readonly variables
- [ ] unused functions
- [ ] unused variables
- [ ] local readonlies</p>
+<ul class="task-list">
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />constexpr arithmetic</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />constexpr boolean evaluation</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />primitive self assignment trim</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />expression dependancy graphs</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />module dependancy graphs</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />constexpr functions</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />readonly variables</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />unused functions</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />unused variables</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />local readonlies</p>
+  </li>
+</ul>
 
 				</div>
 				<hr>
