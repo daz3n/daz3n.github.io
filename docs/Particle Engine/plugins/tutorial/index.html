@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Giving your plugin ui</title>
+		
+		<!-- styles -->				
+		<link rel="stylesheet" href="/assets/themes/dark.css" id = "theme">
+		<link rel="stylesheet" href="/assets/css/common.css">		
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
+
+		<!-- scripts -->
+		<script src="/assets/scripts/theme.js" onload = "setTheme(getTheme());"></script>
+		
+	</head>
+		
+	<body style = "margin:0; padding:0; overflow-x: hidden;">
+		<!-- header -->			
+		<!-- header -->
+		
+		
+		<!-- 		
+			left: 30% -> pad:10% text:20%
+			body: 70% -> pad:5%  text:60% pad:5%		
+		-->
+		
+			<!-- page layout -->
+			<div style = "width:100vw; margin:0; padding:0; min-height:100vh; overflow-x: hidden;">	
+				
+				<!-- sidebar layout -->				
+				<div class = "sidebar">
+					<h1>Docs</h1>
+					<hr>											
+				
+				<a href = "/">Home</a>				
+				
+				<!-- get the directory directly after 'docs' -->
+				<!-- this is the context that the navbar was made for -->
+				
+				 				
+				
+				<ul class = 'nav-bar'>
+<li><a href = '\docs\Particle Engine\ai\'>ai</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\Particle Engine\ai\behaviour\'>behaviour</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\ai\memory\'>memory</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\ai\navigation\'>navigation</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li><a href = '\docs\Particle Engine\asset\'>asset</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\Particle Engine\asset\authoring\'>authoring</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\asset\exporting\'>exporting</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\asset\importing\'>importing</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\asset\updating\'>updating</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\asset\versioning\'>versioning</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li><a href = '\docs\Particle Engine\audio\'>audio</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\Particle Engine\audio\modifier\'>modifier</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\audio\reciever\'>reciever</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\audio\source\'>source</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li><a href = '\docs\Particle Engine\cutscenes\'>cutscenes</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
+<li><a href = '\docs\Particle Engine\graphics\'>graphics</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\Particle Engine\graphics\animations\'>animations</a>
+        <ul class = 'nav-bar'>
+        <li><a href = '\docs\Particle Engine\graphics\animations\controller\'>controller</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\Particle Engine\graphics\animations\events\'>events</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\Particle Engine\graphics\animations\trigger\'>trigger</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\graphics\materials\'>materials</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\graphics\postprocess\'>postprocess</a>
+        <ul class = 'nav-bar'>
+        <li><a href = '\docs\Particle Engine\graphics\postprocess\bloom\'>bloom</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\Particle Engine\graphics\postprocess\blur\'>blur</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\Particle Engine\graphics\postprocess\halos\'>halos</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\Particle Engine\graphics\postprocess\motionblur\'>motionblur</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\Particle Engine\graphics\postprocess\screenspacereflections\'>screenspacereflections</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\Particle Engine\graphics\postprocess\ssao\'>ssao</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\Particle Engine\graphics\postprocess\tonemapping\'>tonemapping</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\graphics\shaders\'>shaders</a>
+        <ul class = 'nav-bar'>
+        <li><a href = '\docs\Particle Engine\graphics\shaders\compute\'>compute</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\Particle Engine\graphics\shaders\mesh\'>mesh</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\Particle Engine\graphics\shaders\screenspace\'>screenspace</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li><a href = '\docs\Particle Engine\input\'>input</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
+<li><a href = '\docs\Particle Engine\localisation\'>localisation</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
+<li><a href = '\docs\Particle Engine\market\'>market</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\Particle Engine\market\buying\'>buying</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\market\selling\'>selling</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li><a href = '\docs\Particle Engine\math\'>math</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
+<li><a href = '\docs\Particle Engine\networking\'>networking</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
+<li><a href = '\docs\Particle Engine\physics\'>physics</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\Particle Engine\physics\bodies\'>bodies</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\physics\colliders\'>colliders</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\physics\joints\'>joints</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\physics\materials\'>materials</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\physics\scene-queries\'>scene-queries</a>
+        <ul class = 'nav-bar'>
+        <li><a href = '\docs\Particle Engine\physics\scene-queries\boxcast\'>boxcast</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\Particle Engine\physics\scene-queries\raycast\'>raycast</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\Particle Engine\physics\scene-queries\spherecast\'>spherecast</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\physics\springs\'>springs</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li><a href = '\docs\Particle Engine\plugins\'>plugins</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\Particle Engine\plugins\editor\'>editor</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\plugins\engine\'>engine</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\plugins\product\'>product</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\plugins\tutorial\'>tutorial</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li><a href = '\docs\Particle Engine\profiling\'>profiling</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
+<li><a href = '\docs\Particle Engine\publishing\'>publishing</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
+<li><a href = '\docs\Particle Engine\scripting\'>scripting</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\Particle Engine\scripting\debugging\'>debugging</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\scripting\hooks\'>hooks</a>
+        <ul class = 'nav-bar'>
+        <li><a href = '\docs\Particle Engine\scripting\hooks\Animate\'>Animate</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\Particle Engine\scripting\hooks\EnterScene\'>EnterScene</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\Particle Engine\scripting\hooks\ExitScene\'>ExitScene</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        <li><a href = '\docs\Particle Engine\scripting\hooks\Update\'>Update</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\scripting\keywords\'>keywords</a>
+        <ul class = 'nav-bar'>
+        <li><a href = '\docs\Particle Engine\scripting\keywords\examples\'>examples</a>
+            <ul class = 'nav-bar'>
+            </ul>
+        </li>
+        </ul>
+    </li>
+    </ul>
+</li>
+<li><a href = '\docs\Particle Engine\serialisation\'>serialisation</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
+<li><a href = '\docs\Particle Engine\testing\'>testing</a>
+    <ul class = 'nav-bar'>
+    </ul>
+</li>
+<li><a href = '\docs\Particle Engine\tutorials\'>tutorials</a>
+    <ul class = 'nav-bar'>
+    <li><a href = '\docs\Particle Engine\tutorials\firstPersonShooter\'>firstPersonShooter</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\tutorials\platformer2D\'>platformer2D</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\tutorials\platformer3D\'>platformer3D</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\tutorials\plugin\'>plugin</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\tutorials\spaceInvaders\'>spaceInvaders</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    <li><a href = '\docs\Particle Engine\tutorials\thirdPersonShooter\'>thirdPersonShooter</a>
+        <ul class = 'nav-bar'>
+        </ul>
+    </li>
+    </ul>
+</li>
+</ul>
+ 
+				</div>
+				
+				<!-- header layout -->
+				<div style = "width:70%; padding:0; margin:0; margin-left:30%; display:inline-block; font-weight:300;">
+				<h1 style = "margin-left:5vw;"> Giving your Plugin UI</h1>				
+				
+				<hr>
+				</div>
+				
+				
+				
+				<div style = "width:60%; min-height:100vh; padding-left:5%;padding-right:5%;padding-top:1em; margin-left:30%; display:inline-block;">															
+					<h1 id="overview">Overview</h1>
+<p>If writing anything other than an asset loader, you will probably want to integrate UI straight into the editor. When writing a plugin, the only steps you really need to take are to use the UI header that comes with the engine, and link against the UI.dll to build your solution. The API is designed to be similar enough to Dear ImGui that using it should already feel natural to those who have used Dear ImGui before.</p>
+
+<h1 id="setting-up">Setting Up</h1>
+
+<h1 id="header-files">Header Files</h1>
+<ul>
+  <li>plugin</li>
+  <li>optional UI</li>
+</ul>
+
+<h3 id="hasupdate">HasUpdate</h3>
+<h3 id="isloader">IsLoader</h3>
+
+<h1 id="init">Init</h1>
+
+<h1 id="update">Update</h1>
+
+<h1 id="canload">CanLoad</h1>
+<h1 id="tryload">TryLoad</h1>
+
+<h1 id="build">Build</h1>
+<p>Each plugin that the engine uses MUST be compiled as a Windows .dll, or a Linux .so.</p>
+
+				</div>
+				<hr>
+				
+							<!-- footer -->
+			<div style = "width:70%; margin-left:30%; padding:0; padding-left:5%; display:inline-block;">
+				<!--
+				<i>
+				copyrights<br>
+				terms of service<br>
+				privacy policy<br>
+				parent company logo<br>
+				product logo<br>
+				</i>
+				-->
+				all content on this site is protected under copyright law. 
+				<br>
+				copyright 2022 - Kye Cunningham.
+				<br><br><br>
+			</div>				
+		</div>
+		
+	</body>
+</html>
