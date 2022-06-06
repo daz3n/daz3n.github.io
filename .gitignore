@@ -1,0 +1,11 @@
+*.yml
+*.bat
+*.exe
+
+*.ini
+
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor

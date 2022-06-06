@@ -1,0 +1,183 @@
+html
+{	
+
+	margin:0;
+	padding:0;
+	font-weight:400;
+	font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+body
+{
+	/* color:#fff; */
+	margin:0;
+	padding:0;
+}
+
+
+a { text-decoration:none; color:#40a; }
+a:hover { color:#62d; }
+
+i {}
+p { }
+h1, h2, h3, h4, h5, h6 { }
+
+ul {}
+li {}
+
+bold {}
+button 
+{
+	background-color:rgba(0,0,0,0.2);	
+	border:none;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	transition:0.3s;
+}
+button:hover
+{
+	cursor:pointer;
+	
+	background-color:rgba(0,0,0,0.1);
+}
+
+
+img {}
+
+table
+{
+	border: 1px solid #228;	
+	border-collapse: collapse;	
+}
+th 
+{
+	padding:1em;
+	background-color:#44a;
+}
+tr:nth-child(odd)
+{
+	padding:1em;
+	background-color:#aaa;
+}
+tr:nth-child(even)
+{
+	padding:1em;
+	background-color:#ccc;
+}
+td 
+{
+	padding:1em;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.group {}
+.test
+{
+	display:grid;
+	grid-template-columns: 50% 50%;
+}
+
+.test > div {   aspect-ratio: 1;  transition:0.3s; }
+.test div:hover { filter:brightness(95%); transform:scale(98%); transition:0.3s;}
+
+.page    { /* background-color:#222; */ background-color:#888; /* background-color:#888; */ width:100vw; min-height:100vh; margin:0; padding-bottom:0; }
+.panel   { /* background-color:#444; */ background-color:#fff; /* background-color:#fff; */ width:50%; margin-top:1em; margin-bottom:1em; }
+.header  { /* background-color:#888; */ background-color:#fff; /* background-color:#fff; */ width:100vw; height:3em; line-height:3em; margin:0; padding:0; }
+.footer  { /* background-color:#888; */ background-color:#fff; /* background-color:#fff; */ width:100%; min-height:20vh; margin:0; border-top:1px solid transparent; padding-bottom: 2em; }
+.sidebar { /* background-color:#222; */ background-color:#888; /* background-color:#888; */ width:20vw; min-height:100vh; float:left; }
+.section { /* background-color:#111; */ background-color:#fff; /* background-color:#fff; */ min-height:20vh; margin:0; overflow:hidden; padding-left:1em; padding-right:1em; padding-bottom:2em; }
+.content { margin:0; padding:0; min-height:100vh; width:100vw; }
+.textbox { margin:0; padding:1em; padding-top:2em; padding-bottom:2em; }
+.landing { background-color:#aaa; margin:0; padding:0; min-height:80vh; }
+.dropper { display:none; }
+
+
+/* i dont want to have to put these directly after the expander */
+.dropper:hover { display:block; }
+
+/* make it so that it has to have the correct id. im not sure how to have customisable ids though... */
+*:hover + .dropper { display:block; }
+
+
+
+.sidebar > * > input[type="checkbox"] {
+  
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em); 
+  display: grid;
+  place-content: center;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+*.thin { font-weight:300; }
+*.thick { font-weight:700; }
+
+.sidebar + .content { margin-left:20vw; width:80vw; }
+.sidebar.thin + .content { margin-left:10vw; width:90vw; }
+.sidebar.thick + .content { margin-left:30vw; width:70vw; }
+
+table.thin {}
+table.thick {}
+
+button.thin{}
+button.thick{}
+ 
+.page.thin  { padding-left:15vw; padding-right:15vw; }
+.page.thick { padding-left:5vw;  padding-right:5vw;  }
+
+.panel.thin  { padding-left:15vw; padding-right:15vw; }
+.panel.thick { padding-left:5vw; padding-right:5vw; }
+
+.sidebar.thin { width:10vw; }
+.sidebar.thick { width:30vw; }
+
+
+.section.thin { min-height:10vh; }
+.section.thick { min-height:100vh; }
+
+
+.header.thick { height:20vh; }
+.header  .group { height:100%; margin:0; padding:0; }
+.header > .group > button { height:100%; margin:0; }
+.header > * + a { margin-left:1em; }
+
+
+
+.footer.thin { height:10vh; }
+.footer.thick { height:40vh; }
+
+.textbox.thin { padding:1em; padding-top:0;padding-bottom:0; }
+.textbox.thick { padding-top:4em; padding-bottom:6em; }
+
+
+.landing.thin { margin:0; padding:0; min-height:40vh; }
+.landing.thick { margin:0; padding:0; min-height:calc(100vh - 3em); }
+
+
+
+.group > button {
+  
+  float: left; /* Float the buttons side by side */
+}
+
+.group > button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
