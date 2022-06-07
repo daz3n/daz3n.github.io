@@ -14,7 +14,11 @@
 		
 		
 		
-		<title> Particle Engine | Docs </title>
+		<title> Particle Engine | Docs | 
+		  
+			Math
+		  
+		</title>
 		
 		
 		<link rel="stylesheet" href="/assets/css/common.css">
@@ -3004,9 +3008,7 @@
 						
 						<h1> 
 		  
-			Particle
-		  
-			Engine
+			Math
 		  
 		</h1>
 						
@@ -3015,19 +3017,46 @@
 				
 			
 			<div class = "section">
-				<h1 id="overview">Overview</h1>
-
-<p>Particle Engine is a high performance game engine, written from the ground up to take advantage of modern hardware. It provides a simple interface for the developer to use the GPU in almost every task, from mathematical functions to asset loading. Asynchronous functions and preloading capabilities ensure that the engine runs with as few stutters as possible, all while rendering thousands of lights at realtime framerates. The state-of-the-art material system provides a broad spectrum of material customisation options, from transparency to emission.</p>
-
-<p>Since its inception, this engine has had thousands of hours of work put into polishing every facet of its inner workings to provide a smooth and intuitive experience in the editor. And for those cases where we just haven’t got what you need, we support a plugin system where you can add your own tools on top of the existing engine.</p>
-
-<h1 id="platforms">Platforms</h1>
-
+				<h2 id="functions">Functions</h2>
 <ul>
-  <li>Windows 10</li>
-  <li>Xbox Series X</li>
-  <li>Xbox One</li>
+  <li>Abs</li>
+  <li>Dot</li>
+  <li>Min</li>
+  <li>Max</li>
+  <li>Lerp</li>
+  <li>Slerp</li>
+  <li>Cross</li>
+  <li>Scale</li>
+  <li>Rotate</li>
+  <li>Inverse</li>
+  <li>Clamp</li>
+  <li>Length</li>
+  <li>Tangent</li>
+  <li>Distance</li>
+  <li>Translate</li>
+  <li>Bitangent</li>
+  <li>Normalize</li>
+  <li>Transpose</li>
+  <li>Magnitude</li>
 </ul>
+
+<hr />
+
+<h2 id="classes">Classes</h2>
+<p>The editor provides some common math classes to kickstart game development.</p>
+
+<h3 id="vector">Vector</h3>
+<p>The vector is one of the most versatile and frequently used mathematical constructs in a game. Since they are so common, care has been taken in making their operations as fast as possibile - SIMD instructions are used where possible, as well as hardware acceleration in the form of CUDA, or OpenCL.</p>
+
+<h3 id="matrix">Matrix</h3>
+<p>The matrix is one of the most frequently used mathematical constructs in graphics programming. Unfortunately, despite the benefit that hardware acceleration would provide to matrix operations, it has yet to be implemented.</p>
+
+<h3 id="quaternion">Quaternion</h3>
+<p>Quaternions are often used to represent a rotation around any arbitrary axis. They are more compact than matrices and also don’t suffer from the same issue of gimbal lock. Quaternion operations are also currently restricted to the CPU, although this is due to time constraints rather than implementation complexity.</p>
+
+<h3 id="dual-quaternion">Dual Quaternion</h3>
+<p>Dual quaternions have been used in mesh skinning to result in a higher fidelity result, however the requirement need currently doesn’t outweigh the time cost or complexity of implementation. Thus, dual quaternions are currently not supported at all in the engine, and will remain so indefinitely.</p>
+
 
 			</div>
 

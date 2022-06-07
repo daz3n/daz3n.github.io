@@ -14,7 +14,11 @@
 		
 		
 		
-		<title> Particle Engine | Docs </title>
+		<title> Particle Engine | Docs | 
+		  
+			Scripting
+		  
+		</title>
 		
 		
 		<link rel="stylesheet" href="/assets/css/common.css">
@@ -3004,9 +3008,7 @@
 						
 						<h1> 
 		  
-			Particle
-		  
-			Engine
+			Scripting
 		  
 		</h1>
 						
@@ -3015,19 +3017,181 @@
 				
 			
 			<div class = "section">
-				<h1 id="overview">Overview</h1>
+				<p>Scripting is provided in the engine through a custom scripting language - Flow. Although the dialect is slightly unique, it is heavily inspired by C.</p>
 
-<p>Particle Engine is a high performance game engine, written from the ground up to take advantage of modern hardware. It provides a simple interface for the developer to use the GPU in almost every task, from mathematical functions to asset loading. Asynchronous functions and preloading capabilities ensure that the engine runs with as few stutters as possible, all while rendering thousands of lights at realtime framerates. The state-of-the-art material system provides a broad spectrum of material customisation options, from transparency to emission.</p>
+<h1 id="primitives">Primitives</h1>
 
-<p>Since its inception, this engine has had thousands of hours of work put into polishing every facet of its inner workings to provide a smooth and intuitive experience in the editor. And for those cases where we just haven’t got what you need, we support a plugin system where you can add your own tools on top of the existing engine.</p>
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">type             </th>
+      <th style="text-align: left">width    </th>
+      <th style="text-align: left">info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">i8</td>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">an integer value from -128 to 127</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">u8</td>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">an integer value from 0 to 255</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">char</td>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">any ascii character</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">bool</td>
+      <td style="text-align: left">1</td>
+      <td style="text-align: left">a value representing either true or false</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">i16</td>
+      <td style="text-align: left">2</td>
+      <td style="text-align: left">an integer value from -32768 to 32767</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">u16</td>
+      <td style="text-align: left">2</td>
+      <td style="text-align: left">an integer value from 0 - 65535</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">wchar</td>
+      <td style="text-align: left">2</td>
+      <td style="text-align: left">any unicode character</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">i32</td>
+      <td style="text-align: left">4</td>
+      <td style="text-align: left">an integer value from -2147483648 to 2147483647</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">u32</td>
+      <td style="text-align: left">4</td>
+      <td style="text-align: left">an integer value  from 0 to 4294967295</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">i64</td>
+      <td style="text-align: left">8</td>
+      <td style="text-align: left">an integer value  from -9223372036854775808 to 9223372036854775807</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">u64</td>
+      <td style="text-align: left">8</td>
+      <td style="text-align: left">an integer value from 0 to 18446744073709551615</td>
+    </tr>
+  </tbody>
+</table>
 
-<h1 id="platforms">Platforms</h1>
+<h1 id="syntax">Syntax</h1>
 
-<ul>
-  <li>Windows 10</li>
-  <li>Xbox Series X</li>
-  <li>Xbox One</li>
+<h3 id="declaring-a-variable">Declaring a variable</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	i8 x = 0;
+	i8 y{0};
+	i8 z;
+</code></pre></div></div>
+
+<h3 id="declaring-an-array">Declaring an array</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	i8 array1[5];
+	i8 array2[5 * 2 + 1];
+</code></pre></div></div>
+<p>Trying to create an array of size 0 or negative size will result in a compile-time error. Arrays can also be procedurally created at compile-time by accessing compiler metadata.</p>
+
+<h3 id="defining-a-class">Defining a class</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	class myClass
+	{
+		...
+	}
+</code></pre></div></div>
+<p>A class can have an optional constructor and destructor, although they aren’t compulsory. If one isn’t provided, then the compiler will attempt to create a default constructor.</p>
+
+<h3 id="defining-a-function">Defining a function</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	i8 add(i8 a, i8 b)
+	{
+		return a + b;
+	}
+</code></pre></div></div>
+
+<p>note that default arguments aren’t currently supported in flow. Here, a temporary of type i8 is returned from the function ‘add’.</p>
+
+<h3 id="defining-an-enumeration">Defining an enumeration</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	enum myEnum
+	{
+		value1,
+		value2,
+		value3
+	}
+</code></pre></div></div>
+
+<h3 id="control-flow-statements">Control Flow Statements</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	if x &gt; 500 { ... } 
+	else if x &gt; 200 { ... } 
+	else { ... }
+
+	while x &gt; 5 { ... } 
+</code></pre></div></div>
+
+<p>Just like in many other languages. Any boolean expression after the if keyword is evaluated at runtime to pick a branch.</p>
+
+<h3 id="notes">Notes</h3>
+
+<p>During compilation, checks can be made to require arrays of a minimum size to be passed into functions. In other words, syntax like this is legal.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>void my_func(int my_input_array[5])
+{
+	...
+}
+</code></pre></div></div>
+
+<p>Here, my_func is able to take any array whose size is known at compile time, as long as its’ size is equal to or greater than 5. The array isn’t copied, instead a reference to the beginning of the array is passed into the function in a similar style to C++. The main difference is that this allows an additional layer of compile-time security - trying to use raw pointers or arrays that are too small will result in a much safer, and more predictable, compile time error.</p>
+
+<h2 id="compiler-optimisation-steps">Compiler optimisation steps</h2>
+
+<ul class="task-list">
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />constexpr arithmetic</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />constexpr boolean evaluation</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />primitive self assignment trim</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />expression dependancy graphs</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />module dependancy graphs</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />constexpr functions</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />readonly variables</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />unused functions</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />unused variables</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />local readonlies</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />unreachable code</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />string pooling</p>
+  </li>
 </ul>
+
 
 			</div>
 

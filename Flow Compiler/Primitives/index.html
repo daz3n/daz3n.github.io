@@ -14,7 +14,11 @@
 		
 		
 		
-		<title> Flow Compiler | Docs </title>
+		<title> Flow Compiler | Docs | 
+		  
+			Primitives
+		  
+		</title>
 		
 		
 		<link rel="stylesheet" href="/assets/css/common.css">
@@ -612,9 +616,7 @@
 						
 						<h1> 
 		  
-			Flow
-		  
-			Compiler
+			Primitives
 		  
 		</h1>
 						
@@ -623,30 +625,99 @@
 				
 			
 			<div class = "section">
-				<h1 id="overview">Overview</h1>
+				<h1 id="primitive-types">Primitive Types</h1>
 
-<ul>
-  <li>What is it?</li>
-  <li>Why was it made?</li>
-  <li>Who is it for?</li>
-  <li>What can it do?</li>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>size</th>
+      <th>min</th>
+      <th>max</th>
+      <th style="text-align: left">info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>bool</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td style="text-align: left">a value representing true or false</td>
+    </tr>
+    <tr>
+      <td>char</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td style="text-align: left">any ascii character</td>
+    </tr>
+    <tr>
+      <td>i8</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td style="text-align: left">an integer value from -128 to 127</td>
+    </tr>
+    <tr>
+      <td>u8</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td style="text-align: left">an integer value from 0 to 255</td>
+    </tr>
+    <tr>
+      <td>wchar</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td style="text-align: left">any unicode character</td>
+    </tr>
+    <tr>
+      <td>i16</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td style="text-align: left">an integer value from -32768 to 32767</td>
+    </tr>
+    <tr>
+      <td>u16</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td style="text-align: left">an integer value from an integer value from 0 - 65535</td>
+    </tr>
+    <tr>
+      <td>i32</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td style="text-align: left">an integer value from -2147483648 to 2147483647</td>
+    </tr>
+    <tr>
+      <td>u32</td>
+      <td>4</td>
+      <td>0</td>
+      <td>0</td>
+      <td style="text-align: left">an integer value from 0 to 4294967295</td>
+    </tr>
+    <tr>
+      <td>i64</td>
+      <td>8</td>
+      <td>0</td>
+      <td>0</td>
+      <td style="text-align: left">an integer value from -9223372036854775808 to 9223372036854775807</td>
+    </tr>
+    <tr>
+      <td>u64</td>
+      <td>8</td>
+      <td>0</td>
+      <td>0</td>
+      <td style="text-align: left">an integer value from 0 to 18446744073709551615</td>
+    </tr>
+  </tbody>
+</table>
 
-<h1 id="what-is-it">What is it?</h1>
-
-<p>Flow compiler is a tiny bytecode compiler made to fit into a game editor. In order to stay small, it supports a very limited set of keywords, and enforces a C-like syntax to allow for most expressions to be evaluated in a single pass.</p>
-
-<h1 id="why-was-it-made">Why was it made?</h1>
-
-<p>Mainly to gain a deeper understanding of compilers, and to see if I could. Until the language has some capabilities for linking to external code, the language will remain very restricted in its capabilities.</p>
-
-<h1 id="who-is-it-for">Who is it for?</h1>
-
-<p>After I’m more confident in its’ robustness and safety, everyone! Hopefully the compiler can act as a foundation for other, cooler projects that other people make.</p>
-
-<h1 id="what-can-it-do">What can it do?</h1>
-
-<p>Currently, the compiler can compile almost any C source file correctly into bytecode, as long as the file doesn’t call into any external functions or libraries, including syscalls. This severely limits the usage of the language, so one of the higher priorities for the language is getting this in.</p>
 
 			</div>
 

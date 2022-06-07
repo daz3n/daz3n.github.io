@@ -14,7 +14,11 @@
 		
 		
 		
-		<title> Particle Engine | Docs </title>
+		<title> Particle Engine | Docs | 
+		  
+			Plugins
+		  
+		</title>
 		
 		
 		<link rel="stylesheet" href="/assets/css/common.css">
@@ -3004,9 +3008,7 @@
 						
 						<h1> 
 		  
-			Particle
-		  
-			Engine
+			Plugins
 		  
 		</h1>
 						
@@ -3016,18 +3018,35 @@
 			
 			<div class = "section">
 				<h1 id="overview">Overview</h1>
+<p>Plugins are supported at the editor level - in fact, most of the editor modules have been implemented as plugins, such as asset loading, conditioning and even management. Generally, plugins should try not perform intensive or repeated tasks, instead leaving that to the core engine whenever possible.</p>
 
-<p>Particle Engine is a high performance game engine, written from the ground up to take advantage of modern hardware. It provides a simple interface for the developer to use the GPU in almost every task, from mathematical functions to asset loading. Asynchronous functions and preloading capabilities ensure that the engine runs with as few stutters as possible, all while rendering thousands of lights at realtime framerates. The state-of-the-art material system provides a broad spectrum of material customisation options, from transparency to emission.</p>
+<h1 id="default-plugins">Default Plugins</h1>
+<p>Asset Loaders - by using plugins for asset loaders, the design team doesn’t need to convert their assets into a specific format for the engine to use - just copy the files straight into the editor, register your plugin, and reload the editor. It’s as easy as that. When the project is built, all assets will be converted into a standard format, ready for the builtin engine loader to read from. The editor provides a few plugin asset loaders out of the box to load common image and model formats.</p>
 
-<p>Since its inception, this engine has had thousands of hours of work put into polishing every facet of its inner workings to provide a smooth and intuitive experience in the editor. And for those cases where we just haven’t got what you need, we support a plugin system where you can add your own tools on top of the existing engine.</p>
+<p>Asset Generators - most of the tools used to generate assets in the editor have been implemented as plugins. This means that they can’t be accessed through script, and restricts their usage to within the editor since plugins aren’t packaged with the final game.</p>
 
-<h1 id="platforms">Platforms</h1>
+<h1 id="writing-a-plugin">Writing a Plugin</h1>
+<p>All plugins for the editor are written in C. In order for a plugin to be registered by the engine, it needs a loader.</p>
 
-<ul>
-  <li>Windows 10</li>
-  <li>Xbox Series X</li>
-  <li>Xbox One</li>
-</ul>
+<h3 id="loader-functions">Loader Functions</h3>
+<h4 id="getnext">GetNext</h4>
+<p>is called to load each plugin. When each plugin has been loaded, it should return 0 to indicate success.</p>
+
+<h3 id="plugin-functions">Plugin Functions</h3>
+<h4 id="getcapabilities">GetCapabilities</h4>
+<p>a required function. Used to filter out actions that the plugin can’t handle.</p>
+<h4 id="canload">CanLoad</h4>
+<p>an optional function.</p>
+<h4 id="tryload">TryLoad</h4>
+<p>an optional function.</p>
+<h4 id="update">Update</h4>
+<p>an optional function.</p>
+
+<h1 id="importing-a-plugin">Importing a Plugin</h1>
+<p>Just download the plugin and copy it into either the project Plugins folder or the editor plugins folder. The editor provides an interface to do this. If the plugin is copied into the editor folder, it will be loaded for all projects made on the machine, whilst if the plugin is copied into the project folder it will be restricted to only being loaded alongside that project.</p>
+
+<h1 id="stopping-a-plugin">Stopping a Plugin</h1>
+<p>To stop a current plugin from continuing, select the plugins dropdown in the menu bar, and terminate the plugin from there. Doing this will immediately unload the plugin for that session. If you would prefer to have the plugin never load ever again, simply remove it from the plugins folder in which it currently is, and the editor won’t load it again.</p>
 
 			</div>
 

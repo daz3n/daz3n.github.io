@@ -14,7 +14,11 @@
 		
 		
 		
-		<title> Particle Engine | Docs </title>
+		<title> Particle Engine | Docs | 
+		  
+			Graphics
+		  
+		</title>
 		
 		
 		<link rel="stylesheet" href="/assets/css/common.css">
@@ -3004,9 +3008,7 @@
 						
 						<h1> 
 		  
-			Particle
-		  
-			Engine
+			Graphics
 		  
 		</h1>
 						
@@ -3016,18 +3018,34 @@
 			
 			<div class = "section">
 				<h1 id="overview">Overview</h1>
+<p>The visual component of a game is often the most heavily praised - or criticised - before anything else. Because it plays such an important role in how the final product is recieved, we’ve spent a long time on improving both the graphics workflow and the speed of the scene draw inside the engine.</p>
 
-<p>Particle Engine is a high performance game engine, written from the ground up to take advantage of modern hardware. It provides a simple interface for the developer to use the GPU in almost every task, from mathematical functions to asset loading. Asynchronous functions and preloading capabilities ensure that the engine runs with as few stutters as possible, all while rendering thousands of lights at realtime framerates. The state-of-the-art material system provides a broad spectrum of material customisation options, from transparency to emission.</p>
+<h1 id="settings">Settings</h1>
 
-<p>Since its inception, this engine has had thousands of hours of work put into polishing every facet of its inner workings to provide a smooth and intuitive experience in the editor. And for those cases where we just haven’t got what you need, we support a plugin system where you can add your own tools on top of the existing engine.</p>
+<p>By default, the engine uses a tiled forward shading pipeline. This allows for the usage of many more light sources than conventional means, including traditional deferred rendering. The engine does also provide a deferred pipeline, although it imposes many more restrictions on the shaders, scenes, and materials.</p>
 
-<h1 id="platforms">Platforms</h1>
+<p>Additionally, shadow settings are set on a per-project basis, with the resolution and cascade number exposed to the development team to edit. If this is left, the engine will try balance out the shadow settings to retain realtime framerates.</p>
 
+<h1 id="how-to">How To</h1>
+
+<h2 id="brief">Brief</h2>
 <ul>
-  <li>Windows 10</li>
-  <li>Xbox Series X</li>
-  <li>Xbox One</li>
+  <li>Create an entity</li>
+  <li>Add a Render Component</li>
+  <li>Set the model, as well as the material to render it with. textures are applied on a per-material basis.</li>
 </ul>
+
+<h2 id="detailed">Detailed</h2>
+<p>After importing assets into the editor, the next question might be ‘well, I can’t see them in the scene, so where are they?’. Not to worry young padawan, for they are floating, but not lost, in the ether of asset management. And if you haven’t imported any assets yet, not to worry - the editor comes with some default models that you can use to get a feel for how your scene should look early on.</p>
+
+<h3 id="create-an-entity">Create an Entity</h3>
+<p>First, you need to create an entity in the scene. You should be able to right click on either the viewport window or the scene hierarchy panel to bring up a context menu. Select ‘empty entity’ - you should find that the entity gets automatically selected, and appears in the entity inspector window.</p>
+
+<h3 id="add-a-rendercomponent">Add a RenderComponent</h3>
+<p>At this point, the entity is still invisible. If you deselect the entity, the only way to select it again is through clicking on it in the scene hierarchy panel. 
+In the inspector, there is a search bar, where you can search for components and scripts to attach to your entity. Type in RenderComponent and select the componenet that comes up to add it to the entity. Now, you should (hopefully) see a white cube pop into existence in the scene. The inspector panel should also show the newly added render component that’s been attached to the entiy.</p>
+
+<p>From this point you can change the settings on the component, so get creative! Change the mesh, or the material information to see what sorts of results you can get from it. Or author your own model in an external tool, and just use that instead!</p>
 
 			</div>
 
